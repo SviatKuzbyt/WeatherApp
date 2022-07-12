@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="detalies01">Вітер</string>
+    <string name="detalies2">Опади</string>
+    <string name="detalies3">Тиск</string>
+    <string name="detalies4">Волога</string>
+    <string name="weather_5_days">Прогноз на 5 днів ></string>
+    <string name="weather_5_days2">Прогноз на 5 днів</string>
+    <string name="weather_today">Прогноз на добу</string>
+</resources>

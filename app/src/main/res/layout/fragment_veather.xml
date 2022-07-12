@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherFragment"
+    android:background="@color/empty">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter_light"
+            android:text="Самбір"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <ImageView
+            android:id="@+id/imageWeatherMain"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/cityName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_weather_icon_01d" />
+
+        <TextView
+            android:id="@+id/tempMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageWeatherMain"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter"
+            android:text="24 °C"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/descriptionMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tempMain"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/inter_light"
+            android:text="Ясно"
+            android:textColor="@color/white_empty"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionMain"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/space1"/>
+
+        <TextView
+            android:id="@+id/textDetalies2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionMain"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_toEndOf="@+id/space1"
+            android:fontFamily="@font/inter_light"
+            android:text="@string/detalies2"
+            android:textColor="@color/white_empty"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/precipitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionMain"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_toEndOf="@+id/textDetalies2"
+            android:fontFamily="@font/inter_light"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textDetalies4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDetalies2"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/space1"
+            android:fontFamily="@font/inter_light"
+            android:text="@string/detalies4"
+            android:textColor="@color/white_empty"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/moisture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/precipitation"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/textDetalies2"
+            android:fontFamily="@font/inter_light"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/textDetalies1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionMain"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/wind"
+            android:fontFamily="@font/inter_light"
+            android:text="@string/detalies01"
+            android:textColor="@color/white_empty"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionMain"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/space1"
+            android:fontFamily="@font/inter_light"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textDetalies3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDetalies2"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/pressure"
+            android:fontFamily="@font/inter_light"
+            android:text="@string/detalies3"
+            android:textColor="@color/white_empty"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/precipitation"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/space1"
+            android:fontFamily="@font/inter_light"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weatherToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pressure"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/white_empty_large"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/weather_today"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/weatherTodayList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="20dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/weather5Days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weatherToday"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/weather_5_days"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</ScrollView>
