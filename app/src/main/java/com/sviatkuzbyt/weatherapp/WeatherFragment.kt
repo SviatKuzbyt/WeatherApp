@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -23,7 +24,7 @@ import java.net.URL
 
 
 @DelicateCoroutinesApi
-class WeatherFragment : Fragment() {
+class WeatherFragment(val city: String) : Fragment() {
 
     var callbacks: OnFragmentCallbacks? = null
     override fun onAttach(context: Context) {
@@ -31,7 +32,7 @@ class WeatherFragment : Fragment() {
         callbacks = activity as OnFragmentCallbacks
     }
     interface OnFragmentCallbacks{ fun replaceViews(background: Int ) }
-    companion object{ fun newInstance() = WeatherFragment() }
+    companion object{ fun newInstance() = WeatherFragment("Sambir") }
 
     lateinit var cityName: TextView
     lateinit var imageWeatherMain: ImageView
@@ -43,6 +44,9 @@ class WeatherFragment : Fragment() {
     lateinit var precipitation: TextView
     lateinit var weatherTodayList: RecyclerView
     lateinit var weather5DaysBtn: TextView
+    lateinit var mainProgressBar: ProgressBar
+    lateinit var weatherImg: String
+    private var downloadedInformation = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,19 +67,16 @@ class WeatherFragment : Fragment() {
         moisture = view.findViewById(R.id.moisture)
         precipitation = view.findViewById(R.id.precipitation)
         weatherTodayList = view.findViewById(R.id.weatherTodayList)
+        mainProgressBar = view.findViewById(R.id.mainProgressBar)
+        cityName.text = city
 
-        updateWeatherInfo("Самбір")
+        updateWeatherInfo(city)
 
         weather5DaysBtn = view.findViewById(R.id.weather5Days)
         weather5DaysBtn.setOnClickListener {
-//            val intent = Intent(context, WeatherFor5Days::class.java)
-//            val bundle: Bundle? = intent.extras
-//            bundle?.putString("city", "Sambir")
-//            startActivity(intent)
-
             val intent = Intent(context, WeatherFor5Days::class.java)
             val bundle = Bundle()
-            bundle.putString("city", "sambir")
+            bundle.putString("city", city)
             intent.putExtras(bundle)
             startActivity(intent)
         }
@@ -113,7 +114,7 @@ class WeatherFragment : Fragment() {
 
 
                 activity?.runOnUiThread{
-                    cityName.text = city
+                    mainProgressBar.visibility = View.GONE
                     tempMain.text = json.getJSONObject("main").getInt("temp").toString() + "°C"
                     descriptionMain.text = json.getJSONArray("weather").getJSONObject(0).getString("description")
                     wind.text = json.getJSONObject("wind").getString("speed") + " м/с"
@@ -121,25 +122,36 @@ class WeatherFragment : Fragment() {
                     moisture.text = json.getJSONObject("main").getString("humidity") + "%"
                     precipitation.text = "${jsonDay.getJSONObject(0).getDouble("pop").toInt() * 100}%"
 
-                    val weatherImg = json.getJSONArray("weather").getJSONObject(0).getString("icon")
+                    weatherImg = json.getJSONArray("weather").getJSONObject(0).getString("icon")
                     imageWeatherMain.setImageResource(setWeatherImage(weatherImg))
 
                     weatherTodayList.adapter = adapter
                     weatherTodayList.layoutManager = LinearLayoutManager(context)
                     weatherTodayList.isNestedScrollingEnabled = false
 
-                    if("n" in weatherImg){
-                        callbacks?.replaceViews(2)
-                    }
-                    else if ("01" in weatherImg || "02" in weatherImg || "03" in weatherImg){
-                        callbacks?.replaceViews(0)
-                    }
-                    else callbacks?.replaceViews(1)
+                    downloadedInformation = true
+                    updateBackground()
+
 
                 }
             } catch (e: Exception) {Toast.makeText(context, "Мережева помилка", Toast.LENGTH_SHORT).show()}
 
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (downloadedInformation) updateBackground()
+    }
+
+    private fun updateBackground(){
+        if("n" in weatherImg){
+            callbacks?.replaceViews(2)
+        }
+        else if ("01" in weatherImg || "02" in weatherImg || "03" in weatherImg){
+            callbacks?.replaceViews(0)
+        }
+        else callbacks?.replaceViews(1)
     }
 
 

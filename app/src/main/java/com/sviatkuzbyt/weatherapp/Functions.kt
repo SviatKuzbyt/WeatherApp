@@ -14,3 +14,4 @@ fun setWeatherImage(text: String): Int{
     else if ("50" in text) R.drawable.ic_weather_icon_50dn
     else R.color.empty
 }
+
