@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/light_blue"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginHorizontal="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_menu"
+        android:layout_margin="10dp"
+        android:id="@+id/moveBtn"/>
+
+    <TextView
+        android:id="@+id/cityNameSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start"
+        android:layout_marginStart="60dp"
+        android:fontFamily="@font/inter"
+        android:text="Самбір"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_trash_1"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="end"
+        android:id="@+id/deleteBtn"/>
+
+
+</androidx.cardview.widget.CardView>

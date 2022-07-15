@@ -1,4 +1,4 @@
-package com.sviatkuzbyt.weatherapp
+package com.sviatkuzbyt.weatherapp.main
 
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.sviatkuzbyt.weatherapp.R
+import com.sviatkuzbyt.weatherapp.WeatherOfDayList
 
 
 class DayListAdapter(val dataSet: MutableList<WeatherOfDayList>, val blackMode: Boolean) :

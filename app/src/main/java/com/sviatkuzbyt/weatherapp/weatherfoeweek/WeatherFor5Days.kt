@@ -1,22 +1,21 @@
-package com.sviatkuzbyt.weatherapp
+package com.sviatkuzbyt.weatherapp.weatherfoeweek
 
-import android.app.Activity
-import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
 import android.widget.Button
 import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.sviatkuzbyt.weatherapp.R
+import com.sviatkuzbyt.weatherapp.WeatherOf5DayList
+import com.sviatkuzbyt.weatherapp.WeatherOfDayList
+import com.sviatkuzbyt.weatherapp.setWeatherImage
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.Exception
 import java.net.URL

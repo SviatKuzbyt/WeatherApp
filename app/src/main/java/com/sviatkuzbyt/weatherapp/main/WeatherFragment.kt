@@ -1,4 +1,4 @@
-package com.sviatkuzbyt.weatherapp
+package com.sviatkuzbyt.weatherapp.main
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -14,6 +14,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.sviatkuzbyt.weatherapp.R
+import com.sviatkuzbyt.weatherapp.WeatherOfDayList
+import com.sviatkuzbyt.weatherapp.setWeatherImage
+import com.sviatkuzbyt.weatherapp.weatherfoeweek.WeatherFor5Days
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

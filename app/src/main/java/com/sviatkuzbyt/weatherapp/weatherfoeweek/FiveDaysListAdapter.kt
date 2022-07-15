@@ -1,4 +1,4 @@
-package com.sviatkuzbyt.weatherapp
+package com.sviatkuzbyt.weatherapp.weatherfoeweek
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.sviatkuzbyt.weatherapp.R
+import com.sviatkuzbyt.weatherapp.WeatherOf5DayList
+import com.sviatkuzbyt.weatherapp.main.DayListAdapter
 
 
 class FiveDaysListAdapter(val dataSet: MutableList<WeatherOf5DayList>, val context: Context) :

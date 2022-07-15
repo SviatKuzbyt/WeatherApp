@@ -10,4 +10,8 @@
     <string name="weather_5_days">Прогноз на 5 днів ></string>
     <string name="weather_5_days2">Прогноз на 5 днів</string>
     <string name="weather_today">Прогноз на добу</string>
+    <string name="cities">Міста</string>
+    <string name="add_city_label">Введіть назву міста</string>
+    <string name="add_city">Додати місто</string>
+    <string name="lviv">Львів</string>
 </resources>

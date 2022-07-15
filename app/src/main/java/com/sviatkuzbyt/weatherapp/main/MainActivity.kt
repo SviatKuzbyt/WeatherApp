@@ -1,20 +1,22 @@
-package com.sviatkuzbyt.weatherapp
+package com.sviatkuzbyt.weatherapp.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ProgressBar
+import android.widget.Button
 import android.widget.RelativeLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.sviatkuzbyt.weatherapp.R
+import com.sviatkuzbyt.weatherapp.cities.CitiesActivity
 
 //WeatherFragment.OnFragmentCallbacks
 class MainActivity : AppCompatActivity(), WeatherFragment.OnFragmentCallbacks {
     lateinit var mainLayout: RelativeLayout
     lateinit var citiesPager: ViewPager2
+    lateinit var geoBtn: Button
     var currentBackground = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +28,9 @@ class MainActivity : AppCompatActivity(), WeatherFragment.OnFragmentCallbacks {
         mainLayout = findViewById(R.id.mainLayout)
         citiesPager = findViewById(R.id.citiesPager)
         citiesPager.adapter = PagerAdapter(this, cities)
+
+        geoBtn = findViewById(R.id.geoBtn)
+        geoBtn.setOnClickListener { startActivity(Intent(this, CitiesActivity::class.java)) }
     }
 
     override fun replaceViews(background: Int) {
