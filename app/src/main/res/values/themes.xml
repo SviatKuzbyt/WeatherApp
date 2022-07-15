@@ -35,4 +35,8 @@
         <item name="android:windowSoftInputMode">adjustResize</item>
     </style>
 
+    <style name="SwipeRefreshStyle">
+        <item name="colorPrimary">@color/blue</item>
+    </style>
+
 </resources>

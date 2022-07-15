@@ -29,7 +29,7 @@
         android:fontFamily="@font/inter_light"
         android:hint="@string/lviv"
         android:inputType="textCapSentences"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addBtnCity"

@@ -2,4 +2,4 @@ package com.sviatkuzbyt.weatherapp
 
 data class WeatherOfDayList (val time: String, val img: Int, val temp: Int, val windSpeed: String)
 data class WeatherOf5DayList (val day: String, val date: String, val weather: MutableList<WeatherOfDayList>)
-data class CitiesListConstructor(val city: String, val place: Int)
+data class CitiesListConstructor(val city: String, val cityEn: String)

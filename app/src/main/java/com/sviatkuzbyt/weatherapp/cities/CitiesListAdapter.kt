@@ -6,16 +6,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.sviatkuzbyt.weatherapp.CitiesListConstructor
 import com.sviatkuzbyt.weatherapp.R
-import com.sviatkuzbyt.weatherapp.cities.movingitems.ItemTouchHelperAdapter
-import java.util.*
+
 
 
 class CitiesListAdapter(val dataSet: MutableList<String>, val activity: CitiesActivity) :
-    RecyclerView.Adapter<CitiesListAdapter.ViewHolder>(), ItemTouchHelperAdapter {
-
-    /**
+    RecyclerView.Adapter<CitiesListAdapter.ViewHolder>() {
+        /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder).
      */
@@ -23,6 +20,7 @@ class CitiesListAdapter(val dataSet: MutableList<String>, val activity: CitiesAc
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val city: TextView
         val deleteBtn: Button
+
 
         init {
             // Define click listener for the ViewHolder's View.
@@ -55,23 +53,4 @@ class CitiesListAdapter(val dataSet: MutableList<String>, val activity: CitiesAc
 
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataSet.size
-
-    override fun onItemMove(fromPosition: Int, toPosition: Int) {
-        if (fromPosition < toPosition) {
-            for (i in fromPosition until toPosition) {
-                Collections.swap(dataSet, i, i + 1)
-            }
-        } else {
-            for (i in fromPosition downTo toPosition + 1) {
-                Collections.swap(dataSet, i, i - 1)
-            }
-        }
-        notifyItemMoved(fromPosition, toPosition)
-    }
-
-    override fun onItemDismiss(position2: Int) {
-        dataSet.removeAt(position2);
-        notifyItemRemoved(position2);
-    }
-
 }

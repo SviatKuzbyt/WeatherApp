@@ -8,6 +8,7 @@
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/drawable/background_cloudy.xml" value="0.158" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/drawable/background_night.xml" value="0.158" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/drawable/button_add.xml" value="0.1" />
+        <entry key="..\:/Developter/WeatherApp/app/src/main/res/drawable/button_empty.xml" value="0.1945" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.114" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.114" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/drawable/ic_weather_icon_50dn.xml" value="0.114" />
@@ -16,12 +17,13 @@
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/font/inter_light.xml" value="0.22314814814814815" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout-v31/short_weather_info.xml" value="0.22447916666666667" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/activity_cities.xml" value="0.2" />
-        <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/activity_more.xml" value="0.25" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/activity_new_city.xml" value="0.22447916666666667" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/activity_weather_for5_days.xml" value="0.25" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/cities_list.xml" value="0.25" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/fragment_add_city.xml" value="0.33" />
-        <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/fragment_veather.xml" value="0.2" />
+        <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/fragment_veather.xml" value="0.22" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/short_weather_info.xml" value="0.25" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/short_weather_info_black.xml" value="0.22447916666666667" />
         <entry key="..\:/Developter/WeatherApp/app/src/main/res/layout/weather_info_for_5_days.xml" value="0.25" />

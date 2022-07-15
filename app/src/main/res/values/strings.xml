@@ -13,5 +13,15 @@
     <string name="cities">Міста</string>
     <string name="add_city_label">Введіть назву міста</string>
     <string name="add_city">Додати місто</string>
-    <string name="lviv">Львів</string>
+    <string name="lviv">Самбір</string>
+    <string name="no_cities">Недодано жодного міста</string>
+    <string name="no_internet">Нема підключення до мережі</string>
+    <string name="error">Помилка</string>
+    <string name="update">Спробувати ще раз</string>
+    <string name="info_label">Інформація</string>
+    <string name="info_text">WeatherApp 1.0\nПрограма, для надання поточних погодних даних, та прогнозу на кілька днів для різних міст. Демостраційний додаток. В стані розробки, не стабільний.\nSviat Kuzbyt липень 2022</string>
+    <string name="url1"><a href="https://openweathermap.org/">OpenWeather - дані про погоду</a></string>
+    <string name="url2"><a href="https://www.flaticon.com/">Іконки (частина) - flaticon.com</a>  </string>
+    <string name="url3"><a href="https://github.com/SviatKuzbyt/WeatherApp">GitHub проєкта</a> </string>
+    <string name="url4"><a href="https://www.instagram.com/kuzbyt.sviat/">Instagram розробника</a> </string>
 </resources>
